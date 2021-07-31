@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block title %} Resultado de la Evaluación{% endblock%}
+
+{% block content %}
+
+<div id="identified_inicio">
+    <h1>Dashboard Resultado de la Evaluación</h1>
+</div>
+
+<div class="content_text">
+    <p> El diagnóstico de los 8 Pilares Estructurales, corresponde a una metodología del consultor 
+        Andrés Silva Arancibia, para realizar un análisis organizacional respecto a cómo las empresas 
+        están preparadas y adecuadas para alcanzar un liderazgo digital empresarial en las industrias.
+    </p>
+    <br>
+    <h1>Diagnóstico Finalizado</h1>
+</div>
+
+{% load static %}
+<br>
+<br>
+<div>
+    <br>
+    <b>N° del Proceso:</b> {{id_proceso}} - Total Pilares: {{p1}} - {{p2}} - {{p3}} - {{p4}} - {{p5}} - {{p6}} - {{p7}} - {{p8}}
+</div>
+
+<!--
+<div>
+    <ul>
+        {% for resultado in resultados%}
+            <li>{{resultado.id}} {{resultado.id_proceso}} {{resultado.p1}} {{resultado.p2}} {{resultado.p3}} {{resultado.p4}} {{resultado.p5}}
+                {{resultado.p6}} {{resultado.p7}} {{resultado.p8}} {{resultado.p9}} {{resultado.p10}} {{resultado.nro_pilar}} 
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+-->
+
+<div>
+   <!-- <img src="{% static 'images/8-pilares.png' %}" width="500"/> -->
+
+<canvas id="myChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Persona', 'Cultura', 'Liderazgo', 'Estrategia', 'Estructura', 'Operaciones y Procesos',
+                    'Creatividad e Innovación', 'Tecnología'],
+        datasets: [{
+            label: 'Indicador Diagnóstico',
+            data: [{{p1}}, {{p2}}, {{p3}}, {{p4}}, {{p5}}, {{p6}}, {{p7}}, {{p8}}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(208, 253, 104, 0.2)',
+                'rgba(104, 253, 149, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+</div>
+
+{% endblock%}

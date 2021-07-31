@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+
+{% block title %} Diagnóstico Organizacional {% endblock%}
+
+{% block content %}
+
+<div id="identified">
+    <h1>Diagnóstico de los 8 Pilares Estructurales</h1>
+</div>
+
+<br>
+<h4>N° Proceso: {{id_proceso}}</h4>
+
+<form action="{% url 'estrategia' %}" method="GET">
+    <div id="">
+        <input type="hidden" name="id_proceso" value="{{id_proceso}}"/>
+    <!--    <table border="1" align="center" bordercolor="blue" cellspacing="0" height="150px">  -->
+        <table>
+            <caption><h2>Evaluación Pilar N° 3 – LIDERAZGO</h2></caption>
+            <thead>
+                <tr>
+                    <th>N°</th><th>Pregunta</th><th>Evaluación</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>3.1</td>
+                <td>¿La Jefatura promueve de manera efectiva el logro de objetivos de su personal a cargo?</td>
+                <td>
+                    <select name="eva3.1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.2</td>
+                <td>¿En la Municipalidad se ejerce un liderazgo efectivo de equipos diversos y multidisciplinarios?</td>
+                <td>
+                    <select name="eva3.2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.3</td>
+                <td>¿En la Municipalidad existe liderazgo inclusivo?</td>
+                <td>
+                    <select name="eva3.3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.4</td>
+                <td>¿El liderazgo en la Municipalidad se ejerce sobre los funcionarios con base en el respeto?</td>
+                <td>
+                    <select name="eva3.4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.5</td>
+                <td>¿La Jefatura tiene un trato justo con sus funcionarios?</td>
+                <td>
+                    <select name="eva3.5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.6</td>
+                <td>¿El liderazgo en la Municipalidad consigue que el funcionario se sienta valorado?</td>
+                <td>
+                    <select name="eva3.6">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.7</td>
+                <td>¿El liderazgo en la Municipalidad logra generar en el funcionario un sentido de pertenencia?</td>
+                <td>
+                    <select name="eva3.7">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.8</td>
+                <td>¿El liderazgo en la Municipalidad promueve el cambio desde abajo hacia arriba en la estructura organizacional?</td>
+                <td>
+                    <select name="eva3.8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.9</td>
+                <td>¿La Jefatura logra empoderar a su personal a cargo?</td>
+                <td>
+                    <select name="eva3.9">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>3.10</td>
+                <td>¿La Jefatura logra que los funcionarios alcancen su máximo potencial de desempeño?</td>
+                <td>
+                    <select name="eva3.10">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="content_text_1">
+        <p>Presiona el "Continuar" para grabar y pasar a la próxima evaluación.</p>
+    </div>
+
+    <div>
+        <input type="submit" name="continuar" value=" Continuar " />
+    </div>
+</form>
+
+{% endblock%}

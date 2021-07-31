@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+            <!-- Título de cada página -->
+        {% endblock %}
+        | Carlos Del Castillo    
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+
+</head>
+
+<body>
+    <!-- Cabecera de la página -->
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logo-muninatales.png' %}"/>
+
+            <h1>Diagnóstico Organizacional | Gestión Municipal </h1>
+        </div>
+    </header>
+
+    <hr/>
+
+    <nav>    
+        <ul>
+            <li>
+                <a href="/inicio">Inicio</a> 
+            </li>
+            <li>
+                <a href="/diagnostico">Diagnóstico de los 8 Pilares</a> 
+            </li>                
+            <li>
+                <a href="/resumen">Resumen del Diagnóstico</a> 
+            </li>                        
+        </ul>
+    </nav>
+    <hr/>
+
+    <div id="content">
+
+        <div class="box">
+           <!-- <h2 class="title">Título de Prueba</h2>  -->
+            {% block content %}
+                <!-- Código que viene de templates -->
+                <strong>Código del bloque original!!</strong>
+            {% endblock %}
+        </div>
+
+    </div>
+    
+    <hr/>
+    <footer>
+        Master en Django &copy; Carlos Del Castillo - {% now "d/m/Y H:m:s" %}
+    </footer>
+
+</body>
+
+</html>

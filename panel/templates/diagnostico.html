@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block title %} Diagnóstico Organizacional {% endblock%}
+
+{% block content %}
+
+<div id="identified">
+    <h1>Diagnóstico de los 8 Pilares Estructurales</h1>
+</div>
+
+<br>
+<br>
+<h2>Instrucciones</h1>
+
+<div class="content_text">
+    <p class="p1"> Para comenzar deberás indicar la Unidad o Dirección a la que perteneces
+        y luego contestar las evaluaciones para cada Pilar Estructural.
+    </p>
+</div>
+<div class="content_text_2">
+    <p class="p1">Cada pregunta tiene una ponderación, la cual tiene una equivalencia según la siguiente tabla.</p>
+</div>
+
+<table class="table3">
+    <tr class="tr3">
+        <th class="th3">Rango</th>
+        <th class="th3">Diagnóstico</th>
+    </tr>
+    <tr class="tr3">
+        <td class="td3_gris">3 - 2,45</td>
+        <td class="td3_verde1">&nbsp;</td>    
+    </tr>
+    <tr class="tr3">
+        <td class="td3_gris">2,44 - 2,05</td>
+        <td class="td3_verde2">&nbsp;</td>    
+    </tr>
+    <tr class="tr3">
+        <td class="td3_gris">2,04 - 1,95</td>
+        <td class="td3_naranjo">&nbsp;</td>    
+    </tr>
+    <tr class="tr3">
+        <td class="td3_gris">1,94 - 1,45</td>
+        <td class="td3_rosado">&nbsp;</td>    
+    </tr>
+    <tr class="tr3">
+        <td class="td3_gris">1,44 - 1</td>
+        <td class="td3_rojo">&nbsp;</td>    
+    </tr>    
+</table>
+
+<div class="content_text_1">
+    <p color="red">Presiona "Comenzar Evaluación" para iniciar el diagnóstico.</p>
+</div>
+
+<form action="{% url 'personas' %}" method="GET">
+
+    <label for="unidad">Seleccione la Unidad o Dirección a la que pertenece</label>
+    <select name="unidad">
+        <option value="0"></option>
+        <option value="1">Dirección de Administración</option>
+        <option value="2">Departamento de Compras</option>
+        <option value="3">Medio Ambiente</option>
+        <option value="4">Unidad de Gestión</option>
+    </select>
+    
+    <div>
+        <br>
+        <br>
+        <input type="submit" name="comenzar" value=" Comenzar Evaluación "/>
+    </div>
+    
+</form>
+
+{% endblock%}

@@ -1,0 +1,359 @@
+/*---- Estilos Generales CSS ----
+    *: Se configura el estilo de todos los elementos de la págona web
+    #: Se configura el estilo de ID
+    .: Se configura el estilo de las clases
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+/* Estilos cabeceras */
+header{
+    width: 1250px;
+    height: 140px;
+    background-color: #23282b;
+    margin: 0px auto;
+}
+
+#logotipo{
+/*        width: 35%;
+        height: 130px; */
+        margin: 0px auto;
+        padding-top: 10px;
+}    
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 50px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #2ba977;
+}
+
+#logotipo img{
+    display: block;
+    margin-left: 10px;
+    width: 300px;
+    float: left;
+    margin-top: 20px;
+}
+
+/* Estilos de navegación */
+nav{
+    width: 1250px;  /* Con un 100% abarca el ancho de la página */
+    height: 40px;
+    margin: 0px auto;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;  /* Sombra de la barra del menú (X,Y,difuminado,color) */
+    font-size: 15px;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #d1d4d6;
+}
+
+nav ul li a:hover{
+    background-color: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset; /* Dentro de la caja */
+    color: white;
+    transition: all 300ms;
+}
+
+.barra{
+    width: 1250px;
+    margin: 0px auto;
+    /*margin-bottom: 140px;   /* Ya no es necesario dado que el margen está en #content*/
+}
+
+/* Estilos contenidos central */
+#content{
+    width: 1250px;
+/*    min-height: 930px; */
+    margin: 0px auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.box{
+    background: white;
+    width: 90%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;    /* Borde de las esquinas de la caja */
+    margin: 0px auto;
+}
+
+.box form{
+    width: 50%;
+}
+.box select{
+    width: 250px;
+    padding: 2px;
+}
+.box label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+.box input[type="submit"]{
+    display: block;
+    padding: 3px;
+    background: #05a1a1;
+    color: white;
+    transition: all 300ms, color 1s;    
+}
+.box input[type="submit"]:hover{
+    cursor: pointer;
+    background: #007777;
+    color: white;
+}
+
+.title{
+    color: #444;
+    letter-spacing: 3px;    /* Estacio entre caracteres del título*/
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+
+/* Estilos footer */
+footer{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+/**********************************************************************/
+
+#identified {
+    width: 700px;
+    height: 40px;
+    background-color: skyblue;
+  }
+
+  #identified_inicio {
+    width: 700px;
+    height: 40px;
+    background-color: #024470;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+.content_text{
+    width: 700px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.content_text_1{
+    width: 700px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: steelblue;
+}
+.content_text_2{
+    width: 700px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/****************** Formato de la Tabla **********************************/
+
+table{
+    background-color: thistle;
+    text-align: left;
+    border-collapse: collapse;
+    width: 1100px;
+}
+
+th,td{
+    /* border: solid 1px steelblue; */
+    padding: 12px;
+}
+
+thead{
+    background-color: steelblue;
+    border-bottom: solid 5px;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}
+
+caption{
+    height: 40px;
+    color: steelblue;
+}
+
+/****************** Formato de división **********************************/
+.columna {
+    width:33%;
+    float:left;
+}
+
+.columna1 {
+    float:left;
+    background-color: rgba(54, 162, 235, 0.2);
+  /*  background: #369681; */
+    color: #007777;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;    /* Borde de las esquinas de la caja */
+    margin: 0px auto;
+    font-size: 15px;
+}
+
+.columna2 {
+    width:33%;
+    float:left;
+    background-color: lightblue;
+}
+
+
+.item {
+    flex: 1 1 auto;  
+}
+  
+@media (max-width: 500px) {
+    .columna {
+      width:auto;
+      float:none;
+    }
+}
+
+.rojo {
+    background-color: red;
+}
+.verde {
+    background-color: green;
+}
+.azul {
+    background-color: blue;
+}
+
+/****************** Formato tabla 2 **********************************/
+.table2{
+    background-color: #369681;
+    text-align: left;
+    border-collapse: collapse;
+    width: 1100px;
+}
+
+.td2{
+    /* border: solid 1px steelblue; */
+    padding: 12px;
+}
+
+.tr2{
+    background-color: white;
+    color: #369681;
+
+}
+
+.tr2:hover .td2{
+    background-color: white;
+    color: #369681;
+}
+
+.p1{
+    text-align:justify;
+}
+
+/****************** Formato tabla 3 **********************************/
+.table3{
+    background-color: #369681;
+    text-align: left;
+    border-collapse: collapse;
+    width: 300px;
+}
+
+.th3{
+    background-color: #369681;
+    color:  whitesmoke;
+}
+
+.tr3{
+    background-color: white;
+    color: #369681;
+
+}
+
+.tr3:hover .td2{
+    background-color: white;
+    color: #369681;
+}
+
+.td3_gris{
+    /* border: solid 1px steelblue; */
+    background-color: #ddd;
+    padding: 10px;
+}
+.td3_verde1{
+    /* border: solid 1px steelblue; */
+    background-color:#24bd9c;
+    padding: 10px;
+}
+.td3_verde2{
+    /* border: solid 1px steelblue; */
+    background-color:#abebc6;
+    padding: 10px;
+}
+.td3_naranjo{
+    /* border: solid 1px steelblue; */
+    background-color:#ffcc80;
+    padding: 10px;
+}
+.td3_rosado{
+    /* border: solid 1px steelblue; */
+    background-color:#f48fb1;
+    padding: 10px;
+}
+.td3_rojo{
+    /* border: solid 1px steelblue; */
+    background-color:#ff5722;
+    padding: 10px;
+}

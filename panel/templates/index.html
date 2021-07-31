@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %} Pantalla Principal {% endblock%}
+
+{% block content %}
+
+<div id="identified_inicio">
+    <h1>Diagnóstico de los 8 Pilares Estructurales</h1>
+</div>
+
+<div class="content_text">
+    <p class="p1"> El diagnóstico de los 8 Pilares Estructurales, corresponde a una metodología del consultor 
+        Andrés Silva Arancibia, para realizar un análisis organizacional respecto a cómo las empresas 
+        están preparadas y adecuadas para alcanzar un liderazgo digital empresarial en las industrias.
+    </p>
+</div>
+
+<table class="table2">
+<tr class="tr2">
+    <td class="td2">
+    <div class="columna">
+        {% load static %}
+        <img src="{% static 'images/8-pilares.png' %}" width="500"/>
+    </div>
+    </td>
+
+    <td class="td2">
+    <div class="columna1">
+        <p><b>PERSONAS:</b> Compromiso con la felicidad y el desarrollo integral de los trabajadores.</p><br>
+        <p><b>CULTURA:</b> Compromiso con los espacios para el desarrollo de la creatividad e innovación orientada al cliente.</p><br>
+        <p><b>LIDERAZGO:</b> Compromiso con el desarrollo integral de la organización en todos sus niveles.</p><br>
+        <p><b>ESTRATEGIA:</b> Compromiso con el desarrollo de la excelencia en la experiencia del cliente.</p><br>
+        <p><b>ESTRUCTURA:</b> Compromiso con la capacidad de adaptarse sistemáticamente al cambio.</p><br>
+        <p><b>OPERACIONES Y PROCESOS:</b> Compromiso con el cumplimiento en tiempo, calidad y costo para el cliente.</p><br>
+        <p><b>CREATIVIDAD E INNOVACIÓN:</b> Compromiso con la creación de valor para el cliente.</p><br>
+        <p><b>TECNOLOGÍA:</b> Compromiso con el mejoramiento y la innovación continua para agregar valor significativo al cliente.</p>
+    </div>
+    </td>
+</tr>
+</table>
+
+{% endblock%}

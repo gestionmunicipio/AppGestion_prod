@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+
+{% block title %} Diagnóstico Organizacional {% endblock%}
+
+{% block content %}
+
+<div id="identified">
+    <h1>Diagnóstico de los 8 Pilares Estructurales</h1>
+</div>
+
+<br>
+<h4>N° Proceso: {{id_proceso}}</h4>
+
+<form action="{% url 'creatividad' %}" method="GET">
+    <div id="">
+        <input type="hidden" name="id_proceso" value="{{id_proceso}}"/>
+    <!--    <table border="1" align="center" bordercolor="blue" cellspacing="0" height="150px">  -->
+        <table>
+            <caption><h2>Evaluación Pilar N° 6 – OPERACIONES Y PROCESOS</h2></caption>
+            <thead>
+                <tr>
+                    <th>N°</th><th>Pregunta</th><th>Evaluación</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>6.1</td>
+                <td>¿Las operaciones y procesos Municipales están diseñados para agregar valor que logre superar las expectativas de la comunidad?</td>
+                <td>
+                    <select name="eva6.1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.2</td>
+                <td>¿Los funcionarios utilizan en su trabajo los equipos y sistemas de modo integral y en todo su potencial?</td>
+                <td>
+                    <select name="eva6.2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.3</td>
+                <td>¿La operatividad y procesos Municipales contribuyen con la calidad del bien y/o servicio entregado a la comunidad?</td>
+                <td>
+                    <select name="eva6.3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.4</td>
+                <td>¿Se mide la eficacia, eficiencia o efectividad de los servicios que se entregan a la comunidad?</td>
+                <td>
+                    <select name="eva6.4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.5</td>
+                <td>¿Existe un mecanismo que permita mantener actualizada las operaciones y procesos Municipales?</td>
+                <td>
+                    <select name="eva6.5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.6</td>
+                <td>¿Hay suficiente consistencia entre lo que se dice y lo que se hace?</td>
+                <td>
+                    <select name="eva6.6">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.7</td>
+                <td>¿Las operaciones, los procesos y la entrega del servicio Municipal hacia la comunidad, están debidamente automatizados?</td>
+                <td>
+                    <select name="eva6.7">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.8</td>
+                <td>¿Las oficinas y centros de atención de público del Municipio, están lo suficientemente cercanos al usuario?</td>
+                <td>
+                    <select name="eva6.8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.9</td>
+                <td>¿La gestión de inventario opera bajo la lógica del justo a tiempo?</td>
+                <td>
+                    <select name="eva6.9">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6.10</td>
+                <td>¿Existe mantenimiento adecuado de los activos tecnológicos del Municipio?</td>
+                <td>
+                    <select name="eva6.10">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="content_text_1">
+        <p>Presiona el "Continuar" para grabar y pasar a la próxima evaluación.</p>
+    </div>
+
+    <div>
+        <input type="submit" name="continuar" value=" Continuar " />
+    </div>
+</form>
+
+{% endblock%}
